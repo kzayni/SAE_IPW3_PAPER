@@ -1,0 +1,382 @@
+%~ \documentclass[letterpaper,times,draft]{sae}
+\documentclass[letterpaper,times]{sae}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{SAEblue}{RGB}{1,160,233}
+%\raggedright
+
+\usepackage[justification=justified, singlelinecheck=false]{caption}  % ,figurename=Fig.,labelfont={it}
+\DeclareCaptionFont{eightpt}{\fontsize{8pt}{11pt}\selectfont #1}
+\captionsetup{font={eightpt,color=SAEblue}}
+
+\usepackage{lineno}
+\usepackage[utf8]{inputenc}
+
+\usepackage{array}% http://ctan.org/pkg/array (also necessary for width calculations (for vert. lines)))
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+% Charge le module graphique tikz
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes,decorations,shadows,arrows,calc}
+\usetikzlibrary{decorations.markings}
+
+\newcommand{\ignore}[1]{}
+\newcommand{\todo}[1]{\textcolor{red}{TODO: {#1}}}
+\newcommand{\todr}[1]{\textcolor{purple}{CAN CUT: {#1}}}
+\newcommand{\todm}[1]{\textcolor{green}{MOVE: {#1}}}
+\newcommand{\case}[1]{\mbox{\textit{#1}}}
+\newcommand{\textss}[1]{\textsuperscript{#1}}
+\renewcommand{\deg}{$^\circ$}
+
+
+\newcommand{\Figref}[1]{Figure \ref{#1}}
+\newcommand{\Figrefs}[2]{Figures \ref{#1} and \ref{#2}}
+\newcommand{\Figrefsto}[2]{Figures \ref{#1} to \ref{#2}}
+\newcommand{\Tabref}[1]{Table \ref{#1}}
+\newcommand*{\dt}[1]{%
+\accentset{\mbox{\large\bfseries .}}{#1}}
+\usepackage{nameref}
+\usepackage{booktabs}
+
+% Define "struts" as suggested by Claudio Beccari in
+% a piece in TeX and TUG News, Vol. 2, 1993.
+\newcommand\Tstrut{\rule{0pt}{4.6ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % "bottom" strut
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top&bottom struts
+
+%%% the following hides the section number while keeping their numbering for proper referencing in toc and \ref
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\csname c@#1\endcsname\c@section
+  }
+\makeatother
+
+\usepackage{subfigure}
+\usepackage{multimedia}
+
+\DeclareMathOperator{\sign}{sign}
+\newcommand{\quotes}[1]{``#1''}
+
+
+\PaperTitle{Assessment of the CHAMPS Aircraft Icing Suite for the Third AIAA Ice Prediction Workshop}
+\usepackage{calc} % to get proper table widths (subtracting colsep and black lines width
+
+\makeatletter 
+\renewcommand\@biblabel[1]{#1. } 
+\makeatother
+
+\AddAuthor{Karim Zayni}{Department of Mechanical Engineering, Polytechnique Montr\'{e}al, Montr\'{e}al, Canada}
+\AddAuthor{Maxime Blanchet}{Department of Mechanical Engineering, Polytechnique Montr\'{e}al, Montr\'{e}al, Canada}
+\AddAuthor{Eric Laurendeau}{Department of Mechanical Engineering, Polytechnique Montr\'{e}al, Montr\'{e}al, Canada}
+\PaperNumber{2027-XX-XXXX}
+\SAECopyright{2027}
+
+
+
+\begin{document}
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+
+\begin{abstract}
+This paper presents the contribution of Polytechnique Montr\'{e}al to the Third AIAA Ice Prediction Workshop (IPW3) using the in-house \textsc{CHAMPS} multiphysics software. Aerodynamic flow, droplet impingement, convective heat transfer, thermodynamics, and ice accretion are assessed for the three-dimensional NACA~0012 and ONERA~M6 configurations. Predictions are evaluated across the prescribed grid hierarchies and for different droplet-size discretizations. Eulerian and Lagrangian droplet formulations show good agreement, while droplet-size discretization is shown to influence the impingement limits more strongly than the integrated collected-water mass. Across both configurations, aerodynamic and droplet-impingement predictions are generally consistent, while greater variability is observed for convective heat transfer. Single-layer ice shapes exhibit limited sensitivity to spatial refinement and generally remain within the experimental envelopes. In contrast, multilayer predictions produce more complex three-dimensional ice morphologies, without necessarily improving agreement with the experimental ice shapes.
+\end{abstract}
+
+% ============================================================
+% INTRODUCTION
+% ============================================================
+
+\section{Introduction}
+
+Aircraft ice accretion is a strongly coupled multiphysics phenomenon involving aerodynamic flow, supercooled water-droplet impingement, surface thermodynamics, and the progressive evolution of the iced geometry. Ice contamination can substantially modify the effective shape of lifting surfaces and consequently degrade aircraft aerodynamic performance, including reductions in maximum lift and increases in drag \cite{CAO2018353,broeren2011aerodynamic}. Reliable numerical icing tools therefore require not only accurate prediction of the individual physical components but also their consistent coupling throughout the accretion process.
+
+Verification and validation are consequently essential for establishing the predictive capabilities and limitations of numerical icing software. Verification assesses the numerical behavior of the implemented methods and their sensitivity to discretization, whereas validation evaluates the ability of the numerical model to reproduce experimental observations. For aircraft icing, this assessment is particularly challenging because uncertainties and modeling errors may propagate through successive components of the icing chain. An accurate final ice shape may therefore result from compensating errors, while discrepancies in intermediate quantities, such as droplet collection or convective heat transfer, can help identify the origin of differences in the final prediction. Component-wise assessment of the icing process is therefore important in addition to evaluation of the final accreted geometry.
+
+A central objective of the AIAA Ice Prediction Workshops is to support the verification and validation of numerical icing tools through standardized test cases and systematic comparisons. In IPW3, common computational grids enable the assessment of spatial discretization effects, while prescribed icing conditions and experimental measurements provide a basis for validation. Code-to-code comparisons complement the available experimental data and help identify modeling sensitivities and differences between numerical approaches. Previous workshops have considered increasingly complex two- and three-dimensional configurations and have established standardized quantities for comparison \cite{laurendeau2022summary}. Polytechnique Montr\'{e}al previously participated in the Ice Prediction Workshops using the in-house CHApel MultiPhysics Software (\textsc{CHAMPS}), including applications to aerodynamic flow, Eulerian droplet impingement, thermodynamics, and three-dimensional ice accretion.
+
+The present work summarizes the contribution of Polytechnique Montr\'{e}al to IPW3 using \textsc{CHAMPS}. Two three-dimensional configurations are considered: the NACA~0012 and the swept ONERA~M6 wing. Both configurations are investigated across the four prescribed grid levels and four droplet-size distributions. The assessment follows the complete numerical icing sequence, from aerodynamic flow and droplet impingement to convective heat transfer, surface thermodynamics, ice mass, and the resulting ice geometry.
+
+The analysis examines the sensitivity of the different components to spatial and droplet-size discretization, while validation against available experimental measurements focuses primarily on the resulting ice shapes and ice mass. Complementary Eulerian and Lagrangian droplet calculations are used to independently assess the impingement predictions. The influence of geometry evolution is further investigated by comparing single-layer and multilayer ice-accretion simulations, with emphasis on their sensitivity and ability to reproduce the measured three-dimensional ice morphology. Together, these comparisons provide a component-wise assessment of \textsc{CHAMPS} and help identify the numerical and modeling sensitivities that most strongly influence the final ice prediction.
+
+% ============================================================
+% NUMERICAL METHODOLOGY
+% ============================================================
+
+\section{Numerical Methodology}
+
+The simulations are performed using the unstructured finite-volume \textsc{CHAMPS} multiphysics solver developed at Polytechnique Montr\'{e}al \cite{champsArticle}. The overall icing framework is illustrated in Fig.~\ref{fig:icingFramework}. The aerodynamic flow field is first computed from the compressible Reynolds-averaged Navier--Stokes (RANS) equations. Droplet impingement is subsequently evaluated to obtain the local collection efficiency, followed by the surface thermodynamic solution and ice-growth calculation. For multilayer simulations, the resulting iced geometry is then used to regenerate the computational domain before the procedure is repeated.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.90\linewidth]{FIGURES/LS_FRAMEWORK/icingFramework.png}
+    \caption{Multiphysics ice-accretion framework implemented in \textsc{CHAMPS}.}
+    \label{fig:icingFramework}
+\end{figure}
+
+The aerodynamic calculations presented in this work use the Spalart--Allmaras turbulence model with the Aupoix roughness correction. Roe convective fluxes combined with a Venkatakrishnan limiter are employed for the flow solution. Supercooled water droplets can be represented using either Eulerian or Lagrangian formulations within \textsc{CHAMPS}. The Eulerian formulation is discretized using an upwind scheme with a Van Albada limiter. Complementary Lagrangian calculations are performed to independently assess the collection-efficiency predictions.
+
+Surface thermodynamics are evaluated using the iterative Messinger model. The convective heat-transfer coefficient is computed from a single aerodynamic solution as
+\[
+h = \left|\frac{q_w''}{T_w-T_r}\right|,
+\]
+where $q_w''$ is the wall heat flux, $T_w$ is the wall temperature, and $T_r$ is the recovery temperature. The recovery temperature is evaluated from the boundary-layer edge conditions as
+\[
+T_r = T_e\left(1 + r\,\frac{\gamma-1}{2}M_e^2\right), \qquad r = \Pr^{1/3},
+\]
+where $T_e$ and $M_e$ are the edge temperature and Mach number, respectively, and $\Pr$ is the Prandtl number. Multiple constant roughness heights are assessed for both configurations to evaluate their influence on the heat-transfer and ice-accretion predictions.
+
+Single-layer ice geometries are generated using an algebraic surface-displacement approach. Multilayer calculations use the continuous level-set methodology developed within \textsc{CHAMPS}. The ice--air interface is represented by the zero contour of a signed-distance function, $\phi$, and propagated according to
+
+\begin{equation}
+    \frac{\partial \phi}{\partial t} + \boldsymbol{V}_{ice}\cdot\nabla\phi = 0,
+\end{equation}
+
+where $\boldsymbol{V}_{ice}$ is determined from the local ice thickness predicted by the thermodynamic model. Following each layer, the $\phi=0$ interface is extracted using \textsc{MMG} and the aerodynamic domain is regenerated using automated \textsc{Pointwise} procedures. This approach permits the development of complex three-dimensional geometries without directly propagating the connectivity of the original aerodynamic surface.
+
+% ============================================================
+% NACA0012
+% ============================================================
+
+\section{NACA0012 Results}
+
+\subsection{Aerodynamics}
+
+The NACA~0012 cases provide a first assessment of the consistency of the \textsc{CHAMPS} predictions within the IPW3 code-to-code ensemble. The prescribed workshop grid hierarchy ranges from approximately $5.9$ million cells on Level~4 to $59.9$ million cells on Level~1. The aerodynamic predictions remain well clustered across the finer grids, with the largest spatial sensitivity observed for drag.
+
+On the Level~1 grid, \textsc{CHAMPS} predicts $C_L=0.4677$, $C_D=0.01129$, and $C_M=-0.00128$. The corresponding workshop median values are approximately $0.4677$, $0.01088$, and $-0.00295$, respectively. The surface-pressure distribution is similarly well positioned within the participant envelope and follows the available experimental measurements, as illustrated in Fig.~\ref{fig:nacaAero}. These results suggest that the aerodynamic solution is unlikely to be the dominant source of differences observed later in the icing chain.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.88\linewidth]{FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png}
+    \caption{NACA~0012 surface-pressure coefficient at $y=0.9144$~m for condition AE3932 on the Level~1 grid.}
+    \label{fig:nacaAero}
+\end{figure}
+
+% ------------------------------------------------------------
+% IMPINGEMENT
+% ------------------------------------------------------------
+
+\subsection{Droplet Impingement}
+
+Droplet impingement is investigated using both spatial-grid and droplet-size refinement. The workshop distributions are represented using different numbers of discrete droplet diameters. Increasing the number of bins generally increases the extent of the impingement region because the smallest and largest droplets contribute to collection outside the region predicted using only the median volumetric diameter.
+
+An important observation is that convergence of integrated collected-water mass does not necessarily imply convergence of the impingement limits. While the total collected mass exhibits relatively modest differences between droplet discretizations, the predicted impingement width remains considerably more sensitive to the representation of the droplet-size distribution.
+
+Complementary Eulerian and Lagrangian calculations provide an independent assessment of the impingement solution. Figure~\ref{fig:eulLag} compares the resulting collected-water mass over the workshop grid hierarchy for the one- and seven-bin distributions. Close agreement is obtained between the two formulations. On the Level~1 grid, the seven-bin calculations predict approximately $113.7$~g and $114.6$~g of collected water using the Eulerian and Lagrangian formulations, respectively. The corresponding one-bin predictions are approximately $105.3$~g and $106.1$~g. The agreement in both integrated mass and local collection-efficiency profiles provides additional confidence in the Eulerian impingement calculations.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.90\linewidth]{FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png}
+    \caption{Comparison of Eulerian and Lagrangian collected-water mass for the NACA~0012 AE3932 condition using one- and seven-bin droplet distributions.}
+    \label{fig:eulLag}
+\end{figure}
+
+% ------------------------------------------------------------
+% HTC AND THERMODYNAMICS
+% ------------------------------------------------------------
+
+\subsection{Heat Transfer and Ice Mass}
+
+The convective heat-transfer coefficient is evaluated from a single RANS solution using the recovery temperature. For the NACA~0012 configuration, the \textsc{CHAMPS} prediction generally lies near the middle of the IPW3 code-to-code envelope. Differences nevertheless remain between submissions using similar turbulence models and nominal roughness heights, indicating that the turbulence model and roughness magnitude alone are insufficient to characterize the complete HTC methodology.
+
+For the AE3932 condition, the experimental ice mass is approximately $101.0$~g. The \textsc{CHAMPS} prediction is close to this value, with approximately $88$--$90\%$ of the collected water freezing and most of the remaining mass removed through evaporation. A more significant discrepancy is observed when comparing AE3932 and AE3933. Experimentally, the ice mass decreases from approximately $101.0$~g to $85.9$~g, corresponding to a reduction of about $15\%$. The numerical prediction exhibits a much smaller reduction. The integrated thermodynamic response is therefore less sensitive to the change in thermal condition than observed experimentally.
+
+% ------------------------------------------------------------
+% ICE SHAPES
+% ------------------------------------------------------------
+
+\subsection{Ice Geometry}
+
+Despite the limited sensitivity of the predicted integrated ice mass, the single-layer ice shapes capture an important experimental trend. The experimental upper horn changes orientation between AE3932 and AE3933, and the same change is reproduced by the \textsc{CHAMPS} calculations. Figure~\ref{fig:nacaIce} shows the Level~1 single-layer results for the two conditions.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}[c]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png}
+        \small (a) AE3932
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png}
+        \small (b) AE3933
+    \end{minipage}
+    \caption{NACA~0012 Level~1 single-layer ice-shape predictions showing the change in horn morphology between the AE3932 and AE3933 thermal conditions.}
+    \label{fig:nacaIce}
+\end{figure}
+
+The single-layer results exhibit limited grid sensitivity and generally remain within the experimental ice-shape envelope. The upper-horn angle is also only weakly affected by the number of droplet bins. Multilayer calculations produce more complex three-dimensional surface morphology but do not reproduce the experimental horn orientation as closely as the single-layer calculations. Additional roughness-sensitivity calculations show that increasing roughness promotes horn growth, whereas lower roughness values improve portions of the cross-sectional agreement while still affecting the predicted horn orientation. These results emphasize the strong coupling between surface roughness, heat transfer, and geometry evolution in glaze-ice conditions.
+
+% ============================================================
+% ONERA M6
+% ============================================================
+
+\section{ONERA M6 Results}
+
+The ONERA~M6 case extends the workshop assessment to a fully three-dimensional swept-wing configuration. The prescribed grid hierarchy ranges from approximately $1.35\times10^5$ cells on Level~4 to $6.92\times10^7$ cells on Level~1.
+
+The integrated aerodynamic coefficients show systematic convergence with spatial refinement. On the Level~1 grid, \textsc{CHAMPS} predicts $C_L=0.12194$, $C_D=0.01754$, and $C_{MY}=-0.04732$, compared with workshop median values of approximately $0.12213$, $0.01786$, and $-0.04736$, respectively. The corresponding differences are approximately $-0.15\%$, $-1.8\%$, and $-0.09\%$. As for the NACA~0012 case, drag exhibits the greatest grid sensitivity.
+
+% ------------------------------------------------------------
+% M6 IMPINGEMENT
+% ------------------------------------------------------------
+
+\subsection{Droplet Impingement and Ice Mass}
+
+The ONERA~M6 impingement solution is assessed at several spanwise stations. The influence of droplet-size discretization is less pronounced than for the NACA~0012 configuration because the prescribed distributions are more strongly concentrated around the median volumetric diameter. Nevertheless, the impingement width continues to increase with additional droplet bins, and differences remain between the seven- and 15-bin distributions.
+
+Eulerian and Lagrangian calculations again produce similar collection-efficiency distributions at the examined spanwise stations, including comparable peak values and impingement limits. The integrated ice mass is approximately $2.8$~kg and exhibits limited sensitivity to both spatial refinement and droplet discretization. Approximately $89\%$ of the collected water freezes under the prescribed icing conditions.
+
+% ------------------------------------------------------------
+% M6 HTC
+% ------------------------------------------------------------
+
+\subsection{Convective Heat Transfer}
+
+The convective heat-transfer coefficient exhibits substantially greater dispersion between workshop submissions than the aerodynamic or impingement quantities. Figure~\ref{fig:m6HTC} shows the Level~1 comparison at the intermediate spanwise station, $y=0.75$~m.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.90\linewidth]{FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png}
+    \caption{ONERA~M6 Level~1 convective heat-transfer coefficient at $y=0.75$~m using a nominal roughness height of $1.0$~mm.}
+    \label{fig:m6HTC}
+\end{figure}
+
+The \textsc{CHAMPS} prediction lies toward the lower portion of the participant envelope, despite using the same recovery-temperature-based methodology that produced approximately mid-range predictions for the NACA~0012 case. Furthermore, workshop submissions employing similar turbulence models and the same nominal roughness height can still produce noticeably different HTC distributions. This indicates that differences in the detailed heat-transfer methodology, thermal reference state, boundary-condition treatment, and numerical implementation can remain important even when the nominal aerodynamic modeling choices are similar.
+
+% ------------------------------------------------------------
+% M6 ICE SHAPES
+% ------------------------------------------------------------
+
+\subsection{Three-Dimensional Ice Geometry}
+
+The ONERA~M6 single-layer ice shapes exhibit relatively limited grid sensitivity over the finer workshop grids. Multilayer simulations are subsequently performed using the continuous level-set framework. Figure~\ref{fig:m6Ice} compares representative single-layer and multilayer cross sections at $y=0.75$~m.
+
+\begin{figure}[htb]
+    \centering
+    \begin{minipage}[c]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png}
+        \small (a) Single layer
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png}
+        \small (b) Multilayer
+    \end{minipage}
+    \caption{ONERA~M6 Level~1 single-layer and multilayer ice-shape predictions at $y=0.75$~m using the seven-bin droplet distribution.}
+    \label{fig:m6Ice}
+\end{figure}
+
+The multilayer calculations generate pronounced three-dimensional horn structures and spanwise variations in ice thickness and extent. A representative three-dimensional level-set ice geometry is shown in Fig.~\ref{fig:m63D}. The resulting morphology demonstrates the ability of the level-set framework to evolve fully three-dimensional ice surfaces without explicit displacement of the connectivity of the original aerodynamic surface.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.78\linewidth]{FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png}
+    \caption{Representative three-dimensional ONERA~M6 multilayer ice geometry predicted using the \textsc{CHAMPS} level-set framework.}
+    \label{fig:m63D}
+\end{figure}
+
+% ============================================================
+% DISCUSSION
+% ============================================================
+
+\section{Discussion}
+
+Several common trends emerge from the NACA~0012 and ONERA~M6 configurations. First, the aerodynamic predictions are generally consistent across the workshop grid hierarchy and are well positioned within the IPW3 code-to-code envelope. The complementary Eulerian and Lagrangian droplet calculations similarly provide close agreement, supporting the consistency of the \textsc{CHAMPS} impingement framework.
+
+The workshop comparisons also illustrate that global and local measures of convergence must be considered separately. Integrated collected-water mass can exhibit relatively small sensitivity to droplet discretization while the local impingement limits remain noticeably different. Similarly, agreement in total ice mass does not guarantee accurate prediction of the local ice morphology.
+
+The thermodynamic portion of the icing chain remains a particularly important source of uncertainty. For the NACA~0012 configuration, \textsc{CHAMPS} reproduces the experimentally observed change in horn orientation between the two thermal conditions while substantially underpredicting the corresponding change in integrated ice mass. For the ONERA~M6 configuration, the workshop results reveal a broad range of HTC predictions even among calculations using nominally similar turbulence models and roughness heights. These observations motivate further verification of the convective heat-transfer formulation and its coupling with the surface energy balance.
+
+Finally, the multilayer simulations demonstrate the potential of the continuous level-set framework for complex three-dimensional ice accretion. In comparison with direct algebraic surface displacement, the implicit representation permits complex ice structures to develop without requiring the original surface connectivity to be preserved. The IPW3 results nevertheless demonstrate that geometry evolution cannot be considered independently of the physical models: the evolution of surface normals, heat transfer, roughness, and water-film thermodynamics directly affects the resulting horn morphology.
+
+% ============================================================
+% CONCLUSIONS
+% ============================================================
+
+\section{Conclusions}
+
+The Polytechnique Montr\'{e}al contribution to the Third AIAA Ice Prediction Workshop has been presented using the \textsc{CHAMPS} multiphysics software. Across both the NACA~0012 and ONERA~M6 configurations, the aerodynamic predictions are generally well positioned within the IPW3 code-to-code envelope and exhibit limited sensitivity over the finer workshop grids. Eulerian and Lagrangian droplet formulations show close agreement in both local collection efficiency and integrated collected-water mass. However, convergence of the integrated water mass does not necessarily imply convergence of the impingement limits, which remain more sensitive to droplet-size discretization. For the NACA~0012 configuration, the single-layer calculations reproduce the experimentally observed change in upper-horn orientation between AE3932 and AE3933, although the predicted ice mass exhibits insufficient sensitivity to the change in thermal condition. For the ONERA~M6 configuration, substantially greater participant-to-participant variability is observed for the convective heat-transfer coefficient than for the aerodynamic and impingement quantities, with similar turbulence models and nominal roughness heights not necessarily resulting in similar heat-transfer predictions.
+
+The multilayer calculations demonstrate the capability of the continuous level-set methodology to produce complex three-dimensional ice morphologies without direct displacement of the aerodynamic surface mesh, although they do not necessarily improve agreement with the experimental ice shapes compared with the single-layer predictions. Overall, the component-wise assessment highlights convective heat transfer, surface roughness, and geometry evolution as important sensitivities in the coupled icing prediction. Future work will therefore focus on further verification of the convective heat-transfer methodology, spatially and temporally evolving roughness models, ice-density modeling, and their coupling with multilayer geometry evolution.
+
+\bibliographystyle{ieeetr} % closest to SAE
+\bibliography{references}
+
+\section{Contact Information}
+Mohamad Karim Zayni\newline
+mohamad-karim.zayni@polymtl.ca
+
+% ============================================================
+% ACKNOWLEDGEMENTS
+% ============================================================
+
+\section{Acknowledgements}
+
+This work was supported in part by the Canada Research Chairs Program,
+the Natural Sciences and Engineering Research Council of Canada (NSERC),
+and the Digital Research Alliance of Canada.
+
+
+% ============================================================
+% DEFINITIONS, ACRONYMS, AND ABBREVIATIONS
+% ============================================================
+
+\section{Definitions, Acronyms, Abbreviations}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{L{0.12\textwidth} L{0.35\textwidth}}
+\textbf{CFD}   & Computational Fluid Dynamics \\
+\textbf{IPW1}  & First AIAA Ice Prediction Workshop \\
+\textbf{RANS}  & Reynolds-Averaged Navier--Stokes \\
+\end{tabular}
+\end{table}
+
+
+% ------------------------------------------------------------
+% General symbols
+% ------------------------------------------------------------
+
+\textbf{General symbols}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{L{0.08\textwidth} L{0.29\textwidth} L{0.08\textwidth}}
+$\dot{m}_{ice}$        & Local ice mass accretion rate & $[\mathrm{kg/(m^2\,s)}]$ \\
+$\boldsymbol{n}_{\phi}$ & Level-set interface normal    & $[-]$ \\
+$t$                    & Time                          & $[\mathrm{s}]$ \\
+$\boldsymbol{V}_{ice}$ & Ice-growth velocity           & $[\mathrm{m/s}]$ \\
+\end{tabular}
+\end{table}
+
+
+% ------------------------------------------------------------
+% Greek symbols
+% ------------------------------------------------------------
+
+\textbf{Greek symbols}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{L{0.08\textwidth} L{0.29\textwidth} L{0.08\textwidth}}
+$\phi$       & Level-set signed-distance function & $[\mathrm{m}]$ \\
+$\rho_{ice}$ & Ice density                        & $[\mathrm{kg/m^3}]$ \\
+\end{tabular}
+\end{table}
+
+
+\end{document}

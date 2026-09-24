@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{CAO2018353}
+Y.~Cao, W.~Tan, and Z.~Wu, ``Aircraft icing: An ongoing threat to aviation safety,'' {\em Aerospace Science and Technology}, vol.~75, pp.~353--385, 2018.
+
+\bibitem{broeren2011aerodynamic}
+A.~P. Broeren, H.~E. Addy~Jr, M.~B. Bragg, G.~T. Busch, and E.~Montreuil, ``Aerodynamic simulation of ice accretion on airfoils,'' tech. rep., 2011.
+
+\bibitem{laurendeau2022summary}
+E.~Laurendeau, S.~Bourgault-Cote, I.~A. Ozcer, R.~Hann, E.~Radenac, and A.~Pueyo, ``Summary from the 1st aiaa ice prediction workshop,'' in {\em AIAA Aviation 2022 Forum}, p.~3398, American Institute of Aeronautics and Astronautics (AIAA), June 2022.
+
+\bibitem{champsArticle}
+M.~Parenteau, S.~Bourgault-Cote, F.~Plante, E.~Kayraklioglu, and E.~Laurendeau, ``Development of parallel cfd applications with the chapel programming language,''
+
+\end{thebibliography}

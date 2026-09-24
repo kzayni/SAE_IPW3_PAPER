@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sae_paper.aux
+The style file: ieeetr.bst
+Database file #1: references.bib
+Warning--empty institution in broeren2011aerodynamic
+Warning--empty journal in champsArticle
+Warning--empty year in champsArticle
+You've used 4 entries,
+            1876 wiz_defined-function locations,
+            501 strings with 4325 characters,
+and the built_in function-call counts, 1037 in all, are:
+= -- 81
+> -- 65
+< -- 0
++ -- 23
+- -- 19
+* -- 84
+:= -- 165
+add.period$ -- 3
+call.type$ -- 4
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 53
+empty$ -- 89
+format.name$ -- 19
+if$ -- 238
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 15
+num.names$ -- 4
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 31
+stack$ -- 0
+substring$ -- 36
+swap$ -- 18
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 7
+width$ -- 5
+write$ -- 36
+(There were 3 warnings)
