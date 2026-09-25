@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  23 SEP 2026 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 SEP 2026 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/mkzayni/Desktop/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex
-(/Users/mkzayni/Desktop/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex
+**/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex
+(/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./sae.cls
@@ -227,7 +227,11 @@ LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
 \@LN@amsmath@ams@eqpen=\count296
- (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks28
 \pgfutil@tempdima=\dimen177
 \pgfutil@tempdimb=\dimen178
@@ -562,7 +566,7 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
 \mm@movie=\count334
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 69.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 70.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
@@ -578,7 +582,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count337
 \calc@Cskip=\skip66
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 80.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 81.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -588,20 +592,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./sae_paper.aux)
 \openout1 = `sae_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -662,7 +666,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 84.
+ on input line 85.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -670,104 +674,102 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 107--108
+Underfull \hbox (badness 1259) in paragraph at lines 110--111
 []\OT1/ptm/m/n/9 The present work sum-ma-rizes the con-tri-bu-tion of Poly-tech-nique
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 110--111
+\OT1/ptm/m/n/9 [8]. Two three-dimensional con-fig-u-ra-tions are con-sid-ered: the
  []
 
 <FIGURES/LS_FRAMEWORK/icingFramework.png, id=30, 1183.42125pt x 268.00125pt>
 File: FIGURES/LS_FRAMEWORK/icingFramework.png Graphic file (type png)
 <use FIGURES/LS_FRAMEWORK/icingFramework.png>
-Package pdftex.def Info: FIGURES/LS_FRAMEWORK/icingFramework.png  used on input line 121.
-(pdftex.def)             Requested size: 227.64896pt x 51.55052pt.
+Package pdftex.def Info: FIGURES/LS_FRAMEWORK/icingFramework.png  used on input line 122.
+(pdftex.def)             Requested size: 222.59283pt x 50.4055pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 4403) in paragraph at lines 127--128
+[]\OT1/ptm/m/n/9 The aero-dy-namic cal-cu-la-tions use the com-press-ible Reynolds-
+ []
 
 
 
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
-]
-
-<FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png, id=38, 1355.0625pt x 1003.75pt>
+ <./FIGURES/LS_FRAMEWORK/icingFramework.png>]
+<FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png, id=39, 1355.0625pt x 1003.75pt>
 File: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png Graphic file (type png)
 <use FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png>
-Package pdftex.def Info: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png  used on input line 160.
-(pdftex.def)             Requested size: 222.59283pt x 164.87643pt.
-
-Underfull \hbox (badness 1584) in paragraph at lines 171--172
-\OT1/ptm/m/n/9 Droplet im-pinge-ment is in-ves-ti-gated us-ing both spatial-grid and
- []
-
-<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png, id=39, 1355.0625pt x 1003.75pt>
+Package pdftex.def Info: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png  used on input line 151.
+(pdftex.def)             Requested size: 212.47287pt x 157.38692pt.
+<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png, id=40, 1355.0625pt x 1003.75pt>
+File: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png Graphic file (type png)
+<use FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png>
+Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png  used on input line 161.
+(pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
+<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png, id=41, 1355.0625pt x 1003.75pt>
 File: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png Graphic file (type png)
 <use FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png>
-Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png  used on input line 179.
-(pdftex.def)             Requested size: 227.64896pt x 168.62885pt.
+Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png  used on input line 170.
+(pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
 
 
-[2 <./FIGURES/LS_FRAMEWORK/icingFramework.png> <./FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png>]
-<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=56, 1355.0625pt x 749.80125pt>
+<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=42, 1355.0625pt x 749.80125pt>
 File: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png Graphic file (type png)
 <use FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>
-Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 206.
+Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 181.
 (pdftex.def)             Requested size: 121.41252pt x 67.18173pt.
-<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=57, 1355.0625pt x 731.73375pt>
+<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=43, 1355.0625pt x 731.73375pt>
 File: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png Graphic file (type png)
 <use FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>
-Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 212.
+Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 188.
 (pdftex.def)             Requested size: 121.41252pt x 65.5629pt.
 
 
-<FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png, id=58, 1355.0625pt x 1003.75pt>
-File: FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png Graphic file (type png)
-<use FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png  used on input line 251.
-(pdftex.def)             Requested size: 227.64896pt x 168.62885pt.
-
-
-[3 <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/ONERAM6/HTC/tc_oneram6_L1_htc_vs_s_slice_0p75_roughness_1mm.png>]
-<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=66, 1355.0625pt x 1003.75pt>
+[2 <./FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png> <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png> <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>]
+<FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png, id=57, 1355.0625pt x 1003.75pt>
+File: FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png Graphic file (type png)
+<use FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png>
+Package pdftex.def Info: FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png  used on input line 207.
+(pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
+<FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png, id=58, 1355.0625pt x 1003.75pt>
+File: FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png Graphic file (type png)
+<use FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png>
+Package pdftex.def Info: FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png  used on input line 216.
+(pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
+<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=59, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 270.
+Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 227.
 (pdftex.def)             Requested size: 121.41252pt x 89.93538pt.
-<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=67, 1355.0625pt x 1003.75pt>
+<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=60, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 276.
+Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 234.
 (pdftex.def)             Requested size: 121.41252pt x 89.93538pt.
-<FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png, id=68, 1446.40375pt x 1285.80376pt>
-File: FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png Graphic file (type png)
-<use FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png>
-Package pdftex.def Info: FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png  used on input line 287.
-(pdftex.def)             Requested size: 197.29678pt x 175.38103pt.
-
-Underfull \hbox (badness 1019) in paragraph at lines 300--301
-\OT1/ptm/m/n/9 sures of con-ver-gence must be con-sid-ered sep-a-rately. In-te-grated
- []
-
 
 
 (./sae_paper.bbl
-Underfull \hbox (badness 2653) in paragraph at lines 10--11
+Underfull \hbox (badness 1762) in paragraph at lines 19--20
 []\OT1/ptm/m/n/9 E. Lau-ren-deau, S. Bourgault-Cote, I. A. Ozcer, R. Hann,
  []
 
-)
 
-[4 <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_VIEWS/ONERAM6_3.png (PNG copy)>]
-Overfull \hbox (25.80739pt too wide) in paragraph at lines 342--347
+
+[3 <./FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png> <./FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png>])
+Overfull \hbox (25.80739pt too wide) in paragraph at lines 281--289
  [][] 
  []
 
 
-Overfull \hbox (26.96458pt too wide) in paragraph at lines 358--364
+Overfull \hbox (26.96458pt too wide) in paragraph at lines 300--307
  [][] 
  []
 
 
-Overfull \hbox (26.96458pt too wide) in paragraph at lines 375--379
+Overfull \hbox (26.96458pt too wide) in paragraph at lines 318--322
  [][] 
  []
 
@@ -775,7 +777,7 @@ Overfull \hbox (26.96458pt too wide) in paragraph at lines 375--379
 
 
 
-[5
+[4
 
 ] (./sae_paper.aux)
  ***********
@@ -784,18 +786,18 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29212 strings out of 473190
- 749515 string characters out of 5715801
- 1253421 words of memory out of 5000000
- 51943 multiletter control sequences out of 15000+600000
- 584625 words of font info for 83 fonts, out of 8000000 for 9000
+ 29310 strings out of 473190
+ 752224 string characters out of 5715801
+ 1252484 words of memory out of 5000000
+ 52047 multiletter control sequences out of 15000+600000
+ 581863 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,87p,1361b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sae_paper.pdf (5 pages, 850744 bytes).
+ 84i,12n,87p,1672b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sae_paper.pdf (4 pages, 851932 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

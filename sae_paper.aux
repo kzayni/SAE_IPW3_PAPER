@@ -1,53 +1,68 @@
 \relax 
-\citation{CAO2018353}
-\citation{broeren2011aerodynamic}
-\citation{laurendeau2022summary}
+\citation{CAO2018353,broeren2011aerodynamic,KIND1998257}
+\citation{wright2008manual,bourgault1999eulerian}
+\citation{laurendeau2022summary,laurendeau2024summary}
 \citation{champsArticle}
+\citation{champsArticle}
+\citation{spalart1992one}
+\citation{aupoix2003roughness}
+\citation{roe1981approximate}
+\citation{venkatakrishnan1995convergence}
+\citation{bourgault1999eulerian}
+\citation{wright2008manual}
 \@LN@col{1}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
 \@LN@col{2}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Numerical Methodology}{1}{}\protected@file@percent }
-\@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Multiphysics ice-accretion framework implemented in \textsc  {CHAMPS}.}}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methodology}{1}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Multiphysics ice-accretion framework implemented in \textsc  {CHAMPS}.}}{1}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:icingFramework}{{1}{2}{Multiphysics ice-accretion framework implemented in \textsc {CHAMPS}}{figure.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}NACA0012 Results}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Aerodynamics}{2}{}\protected@file@percent }
-\@LN@col{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces NACA~0012 surface-pressure coefficient at $y=0.9144$~m for condition AE3932 on the Level~1 grid.}}{2}{}\protected@file@percent }
-\newlabel{fig:nacaAero}{{2}{2}{NACA~0012 surface-pressure coefficient at $y=0.9144$~m for condition AE3932 on the Level~1 grid}{figure.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Droplet Impingement}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Heat Transfer and Ice Mass}{2}{}\protected@file@percent }
+\newlabel{fig:icingFramework}{{1}{1}{Multiphysics ice-accretion framework implemented in \textsc {CHAMPS}}{figure.1}{}}
+\citation{messinger1953equilibrium}
+\citation{OSHER198812,OSHER2004}
+\citation{DAPOGNY2014358}
 \@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of Eulerian and Lagrangian collected-water mass for the NACA~0012 AE3932 condition using one- and seven-bin droplet distributions.}}{3}{}\protected@file@percent }
-\newlabel{fig:eulLag}{{3}{3}{Comparison of Eulerian and Lagrangian collected-water mass for the NACA~0012 AE3932 condition using one- and seven-bin droplet distributions}{figure.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Ice Geometry}{3}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces NACA~0012 Level~1 single-layer ice-shape predictions showing the change in horn morphology between the AE3932 and AE3933 thermal conditions.}}{3}{}\protected@file@percent }
-\newlabel{fig:nacaIce}{{4}{3}{NACA~0012 Level~1 single-layer ice-shape predictions showing the change in horn morphology between the AE3932 and AE3933 thermal conditions}{figure.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}ONERA M6 Results}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminary Results}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}NACA~0012}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces NACA~0012 Level~1 surface-pressure coefficient distribution for condition AE3932.}}{2}{}\protected@file@percent }
+\newlabel{fig:nacaAero}{{2}{2}{NACA~0012 Level~1 surface-pressure coefficient distribution for condition AE3932}{figure.2}{}}
 \@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Droplet Impingement and Ice Mass}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Convective Heat Transfer}{3}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces ONERA~M6 Level~1 convective heat-transfer coefficient at $y=0.75$~m using a nominal roughness height of $1.0$~mm.}}{3}{}\protected@file@percent }
-\newlabel{fig:m6HTC}{{5}{3}{ONERA~M6 Level~1 convective heat-transfer coefficient at $y=0.75$~m using a nominal roughness height of $1.0$~mm}{figure.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Three-Dimensional Ice Geometry}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Effect of droplet-size discretization on the NACA~0012 collection-efficiency distribution for condition AE3932.}}{2}{}\protected@file@percent }
+\newlabel{fig:nacaBins}{{3}{2}{Effect of droplet-size discretization on the NACA~0012 collection-efficiency distribution for condition AE3932}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Eulerian and Lagrangian collected-water mass for NACA~0012 AE3932 using 1- and 7-bin droplet distributions.}}{2}{}\protected@file@percent }
+\newlabel{fig:eulLag}{{4}{2}{Eulerian and Lagrangian collected-water mass for NACA~0012 AE3932 using 1- and 7-bin droplet distributions}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces NACA~0012 Level~1 single-layer ice shapes showing the change in horn morphology between AE3932 and AE3933.}}{2}{}\protected@file@percent }
+\newlabel{fig:nacaIce}{{5}{2}{NACA~0012 Level~1 single-layer ice shapes showing the change in horn morphology between AE3932 and AE3933}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}ONERA~M6}{2}{}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{references}
 \bibcite{CAO2018353}{1}
 \bibcite{broeren2011aerodynamic}{2}
-\bibcite{laurendeau2022summary}{3}
-\bibcite{champsArticle}{4}
+\bibcite{KIND1998257}{3}
+\bibcite{wright2008manual}{4}
+\bibcite{bourgault1999eulerian}{5}
+\bibcite{laurendeau2022summary}{6}
+\bibcite{laurendeau2024summary}{7}
+\bibcite{champsArticle}{8}
+\bibcite{spalart1992one}{9}
+\bibcite{aupoix2003roughness}{10}
+\bibcite{roe1981approximate}{11}
+\bibcite{venkatakrishnan1995convergence}{12}
 \@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces ONERA~M6 Level~1 single-layer and multilayer ice-shape predictions at $y=0.75$~m using the seven-bin droplet distribution.}}{4}{}\protected@file@percent }
-\newlabel{fig:m6Ice}{{6}{4}{ONERA~M6 Level~1 single-layer and multilayer ice-shape predictions at $y=0.75$~m using the seven-bin droplet distribution}{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Representative three-dimensional ONERA~M6 multilayer ice geometry predicted using the \textsc  {CHAMPS} level-set framework.}}{4}{}\protected@file@percent }
-\newlabel{fig:m63D}{{7}{4}{Representative three-dimensional ONERA~M6 multilayer ice geometry predicted using the \textsc {CHAMPS} level-set framework}{figure.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces ONERA~M6 surface-pressure coefficient distributions across the prescribed grid hierarchy at the midspan slice, $y=0.75$~m.}}{3}{}\protected@file@percent }
+\newlabel{fig:m6Cp}{{6}{3}{ONERA~M6 surface-pressure coefficient distributions across the prescribed grid hierarchy at the midspan slice, $y=0.75$~m}{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Eulerian and Lagrangian collection-efficiency distributions for the ONERA~M6 on the Level~1 grid at $y=0.75$~m using the single-bin droplet distribution.}}{3}{}\protected@file@percent }
+\newlabel{fig:m6EulLag}{{7}{3}{Eulerian and Lagrangian collection-efficiency distributions for the ONERA~M6 on the Level~1 grid at $y=0.75$~m using the single-bin droplet distribution}{figure.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Expected Results}{3}{}\protected@file@percent }
 \@LN@col{2}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces ONERA~M6 Level~1 single-layer and multilayer ice-shape predictions at $y=0.75$~m.}}{3}{}\protected@file@percent }
+\newlabel{fig:m6Ice}{{8}{3}{ONERA~M6 Level~1 single-layer and multilayer ice-shape predictions at $y=0.75$~m}{figure.8}{}}
+\bibcite{messinger1953equilibrium}{13}
+\bibcite{OSHER198812}{14}
+\bibcite{OSHER2004}{15}
+\bibcite{DAPOGNY2014358}{16}
 \@LN@col{1}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Contact Information}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Acknowledgements}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Definitions, Acronyms, Abbreviations}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Contact Information}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Acknowledgements}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Definitions, Acronyms, Abbreviations}{4}{}\protected@file@percent }
 \@LN@col{2}
-\gdef \@abspage@last{5}
+\gdef \@abspage@last{4}

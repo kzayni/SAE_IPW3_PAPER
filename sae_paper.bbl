@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{CAO2018353}
 Y.~Cao, W.~Tan, and Z.~Wu, ``Aircraft icing: An ongoing threat to aviation safety,'' {\em Aerospace Science and Technology}, vol.~75, pp.~353--385, 2018.
@@ -6,10 +6,47 @@ Y.~Cao, W.~Tan, and Z.~Wu, ``Aircraft icing: An ongoing threat to aviation safet
 \bibitem{broeren2011aerodynamic}
 A.~P. Broeren, H.~E. Addy~Jr, M.~B. Bragg, G.~T. Busch, and E.~Montreuil, ``Aerodynamic simulation of ice accretion on airfoils,'' tech. rep., 2011.
 
+\bibitem{KIND1998257}
+R.~Kind, M.~Potapczuk, A.~Feo, C.~Golia, and A.~Shah, ``Experimental and computational simulation of in-flight icing phenomena,'' {\em Progress in Aerospace Sciences}, vol.~34, no.~5, pp.~257--345, 1998.
+
+\bibitem{wright2008manual}
+W.~B. Wright, ``User's manual for lewice version 3.2,'' NASA Contractor Report NASA/CR-2008-214255, NASA Glenn Research Center, Nov. 2008.
+
+\bibitem{bourgault1999eulerian}
+Y.~Bourgault, W.~G. Habashi, J.~Dompierre, and G.~S. Baruzzi, ``A finite element method study of eulerian droplets impingement models,'' {\em International Journal for Numerical Methods in Fluids}, vol.~29, no.~4, pp.~429--449, 1999.
+
 \bibitem{laurendeau2022summary}
 E.~Laurendeau, S.~Bourgault-Cote, I.~A. Ozcer, R.~Hann, E.~Radenac, and A.~Pueyo, ``Summary from the 1st aiaa ice prediction workshop,'' in {\em AIAA Aviation 2022 Forum}, p.~3398, American Institute of Aeronautics and Astronautics (AIAA), June 2022.
 
+\bibitem{laurendeau2024summary}
+E.~Laurendeau, M.~Blanchet, M.~K. Zayni, R.~Hann, E.~Radenac, I.~Mussa, and A.~Pueyo, ``Summary from the 2nd aiaa ice prediction workshop,'' in {\em AIAA AVIATION FORUM AND ASCEND 2024}, American Institute of Aeronautics and Astronautics, July 2024.
+
 \bibitem{champsArticle}
 M.~Parenteau, S.~Bourgault-Cote, F.~Plante, E.~Kayraklioglu, and E.~Laurendeau, ``Development of parallel cfd applications with the chapel programming language,''
+
+\bibitem{spalart1992one}
+P.~R. Spalart and S.~R. Allmaras, ``A one-equation turbulence model for aerodynamic flows,'' in {\em 30th Aerospace Sciences Meeting and Exhibit}, American Institute of Aeronautics and Astronautics, 1992.
+
+\bibitem{aupoix2003roughness}
+B.~Aupoix and P.~R. Spalart, ``Extensions of the spalart--allmaras turbulence model to account for wall roughness,'' {\em International Journal of Heat and Fluid Flow}, vol.~24, no.~4, pp.~454--462, 2003.
+
+\bibitem{roe1981approximate}
+P.~L. Roe, ``Approximate riemann solvers, parameter vectors, and difference schemes,'' {\em Journal of Computational Physics}, vol.~43, no.~2, pp.~357--372, 1981.
+
+\bibitem{venkatakrishnan1995convergence}
+V.~Venkatakrishnan, ``Convergence to steady state solutions of the euler equations on unstructured grids with limiters,'' {\em Journal of Computational Physics}, vol.~118, no.~1, pp.~120--130, 1995.
+
+\bibitem{messinger1953equilibrium}
+B.~L. Messinger, ``Equilibrium temperature of an unheated icing surface as a function of air speed,'' {\em Journal of the Aeronautical Sciences}, vol.~20, no.~1, pp.~29--42, 1953.
+
+\bibitem{OSHER198812}
+S.~Osher and J.~A. Sethian, ``Fronts propagating with curvature-dependent speed: Algorithms based on hamilton-jacobi formulations,'' {\em Journal of Computational Physics}, vol.~79, no.~1, pp.~12--49, 1988.
+
+\bibitem{OSHER2004}
+S.~Osher and R.~Fedkiw, {\em The Level Set Methods and Dynamic Implicit Surfaces}, vol.~57, pp.~xiv+273.
+\newblock 05 2004.
+
+\bibitem{DAPOGNY2014358}
+C.~Dapogny, C.~Dobrzynski, and P.~Frey, ``Three-dimensional adaptive domain remeshing, implicit domain meshing, and applications to free and moving boundary problems,'' {\em Journal of Computational Physics}, vol.~262, pp.~358--378, 2014.
 
 \end{thebibliography}
