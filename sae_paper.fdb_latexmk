@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex sae_paper"] 1790308101.52007 "sae_paper.aux" "sae_paper.bbl" "sae_paper" 1790308103.01596 0
-  "./references.bib" 1790307090.28228 18462 8e3c9dc039ffbc498f2a97b07739a0be ""
+["bibtex sae_paper"] 1790615780.97224 "sae_paper.aux" "sae_paper.bbl" "sae_paper" 1790615783.9596 0
+  "./references.bib" 1790609575.8698 18464 2af9ea26e5e7f05ade7d0f34e700fe27 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "sae_paper.aux" 1790308102.82715 5022 37d3d05195e8e2eb67a9cf1f16960c70 "pdflatex"
+  "sae_paper.aux" 1790615783.56908 5456 a33e6985ea32cba5082a31a817e314a1 "pdflatex"
   (generated)
   "sae_paper.bbl"
   "sae_paper.blg"
   (rewritten before read)
-["pdflatex"] 1790308101.60801 "/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex" "sae_paper.pdf" "sae_paper" 1790308103.01607 0
-  "/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex" 1790308099.80012 20559 9ebfb8f5f475f03293f1f29bbf958c60 ""
+["pdflatex"] 1790615781.14311 "/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex" "sae_paper.pdf" "sae_paper" 1790615783.9598 0
+  "/Users/mkzayni/Desktop/UNIVERSITY/PAPERS/SAE_IPW3_PAPER/SAE_IPW3_PAPER/sae_paper.tex" 1790615777.75942 20613 cdee33f07a53e72e667e8d61b98e95e2 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1248133631 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1136849748 44656 0cbca70e0534538582128f6b54593cca ""
@@ -228,7 +229,7 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1751417392 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "FIGURES/LS_FRAMEWORK/icingFramework.png" 1789530248.40628 58587 d839f85443d98def514dccccac4caf50 ""
+  "FIGURES/LS_FRAMEWORK/icingFramework.eps" 1790614938.22603 1154206 f75df053a79b9985fc58dfee273c3505 ""
   "FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png" 1790134178.13032 132249 72207cfa34e62906929cdbfef1ec1d5d ""
   "FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png" 1790135636.6696 165374 1ce629d903ed015ea1bd2bf111698f4a ""
   "FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png" 1790135636.67447 160544 882127d1f203cda2115ce045d0242cd4 ""
@@ -239,9 +240,9 @@
   "FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png" 1790136087.82365 141493 354822631439f6ad40787a00a9f61266 ""
   "FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png" 1790134227.85232 125441 41bbf6a0b8c691e7761b05fc7570064c ""
   "sae.cls" 1789689926 5328 bec47a4f51637a2e2ebaefd8569b92da ""
-  "sae_paper.aux" 1790308102.82715 5022 37d3d05195e8e2eb67a9cf1f16960c70 "pdflatex"
-  "sae_paper.bbl" 1790308101.60535 3583 5feedb78b63b1915ea5c273e8b20abe1 "bibtex sae_paper"
-  "sae_paper.tex" 1790308099.80012 20559 9ebfb8f5f475f03293f1f29bbf958c60 ""
+  "sae_paper.aux" 1790615783.56908 5456 a33e6985ea32cba5082a31a817e314a1 "pdflatex"
+  "sae_paper.bbl" 1790615781.1378 3567 333bf4c51a42db85497e102491a4345d "bibtex sae_paper"
+  "sae_paper.tex" 1790615777.75942 20613 cdee33f07a53e72e667e8d61b98e95e2 ""
   (generated)
   "sae_paper.aux"
   "sae_paper.log"

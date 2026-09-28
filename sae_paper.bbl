@@ -6,15 +6,6 @@ Y.~Cao, W.~Tan, and Z.~Wu, ``Aircraft icing: An ongoing threat to aviation safet
 \bibitem{broeren2011aerodynamic}
 A.~P. Broeren, H.~E. Addy~Jr, M.~B. Bragg, G.~T. Busch, and E.~Montreuil, ``Aerodynamic simulation of ice accretion on airfoils,'' tech. rep., 2011.
 
-\bibitem{KIND1998257}
-R.~Kind, M.~Potapczuk, A.~Feo, C.~Golia, and A.~Shah, ``Experimental and computational simulation of in-flight icing phenomena,'' {\em Progress in Aerospace Sciences}, vol.~34, no.~5, pp.~257--345, 1998.
-
-\bibitem{wright2008manual}
-W.~B. Wright, ``User's manual for lewice version 3.2,'' NASA Contractor Report NASA/CR-2008-214255, NASA Glenn Research Center, Nov. 2008.
-
-\bibitem{bourgault1999eulerian}
-Y.~Bourgault, W.~G. Habashi, J.~Dompierre, and G.~S. Baruzzi, ``A finite element method study of eulerian droplets impingement models,'' {\em International Journal for Numerical Methods in Fluids}, vol.~29, no.~4, pp.~429--449, 1999.
-
 \bibitem{laurendeau2022summary}
 E.~Laurendeau, S.~Bourgault-Cote, I.~A. Ozcer, R.~Hann, E.~Radenac, and A.~Pueyo, ``Summary from the 1st aiaa ice prediction workshop,'' in {\em AIAA Aviation 2022 Forum}, p.~3398, American Institute of Aeronautics and Astronautics (AIAA), June 2022.
 
@@ -35,6 +26,16 @@ P.~L. Roe, ``Approximate riemann solvers, parameter vectors, and difference sche
 
 \bibitem{venkatakrishnan1995convergence}
 V.~Venkatakrishnan, ``Convergence to steady state solutions of the euler equations on unstructured grids with limiters,'' {\em Journal of Computational Physics}, vol.~118, no.~1, pp.~120--130, 1995.
+
+\bibitem{bourgault1999eulerian}
+Y.~Bourgault, W.~G. Habashi, J.~Dompierre, and G.~S. Baruzzi, ``A finite element method study of eulerian droplets impingement models,'' {\em International Journal for Numerical Methods in Fluids}, vol.~29, no.~4, pp.~429--449, 1999.
+
+\bibitem{sbcThesis}
+S.~Bourgault-Côté, {\em Ice Interface Evolution Modelling Algorithms for Aircraft Icing}.
+\newblock PhD thesis, 2019.
+
+\bibitem{ZAYNI2026112019}
+K.~Zayni, M.~Blanchet, and Éric Laurendeau, ``A ray-tracing-enhanced lagrangian particle tracking framework for ice accretion applications,'' {\em Aerospace Science and Technology}, vol.~175, p.~112019, 2026.
 
 \bibitem{messinger1953equilibrium}
 B.~L. Messinger, ``Equilibrium temperature of an unheated icing surface as a function of air speed,'' {\em Journal of the Aeronautical Sciences}, vol.~20, no.~1, pp.~29--42, 1953.

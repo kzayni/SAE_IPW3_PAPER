@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 SEP 2026 23:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 SEP 2026 13:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -669,27 +669,36 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
  on input line 85.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
 Underfull \hbox (badness 1259) in paragraph at lines 110--111
 []\OT1/ptm/m/n/9 The present work sum-ma-rizes the con-tri-bu-tion of Poly-tech-nique
  []
 
 
 Underfull \hbox (badness 1496) in paragraph at lines 110--111
-\OT1/ptm/m/n/9 [8]. Two three-dimensional con-fig-u-ra-tions are con-sid-ered: the
+\OT1/ptm/m/n/9 [5]. Two three-dimensional con-fig-u-ra-tions are con-sid-ered: the
  []
 
-<FIGURES/LS_FRAMEWORK/icingFramework.png, id=30, 1183.42125pt x 268.00125pt>
-File: FIGURES/LS_FRAMEWORK/icingFramework.png Graphic file (type png)
-<use FIGURES/LS_FRAMEWORK/icingFramework.png>
-Package pdftex.def Info: FIGURES/LS_FRAMEWORK/icingFramework.png  used on input line 122.
-(pdftex.def)             Requested size: 222.59283pt x 50.4055pt.
 
-Underfull \hbox (badness 4403) in paragraph at lines 127--128
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package epstopdf Info: Source file: <FIGURES/LS_FRAMEWORK/icingFramework.eps>
+(epstopdf)                    date: 2026-09-28 13:02:18
+(epstopdf)                    size: 1154206 bytes
+(epstopdf)             Output file: <FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf>
+(epstopdf)                    date: 2026-09-28 13:03:19
+(epstopdf)                    size: 12653 bytes
+(epstopdf)             Command: <repstopdf --outfile=FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf FIGURES/LS_FRAMEWORK/icingFramework.eps>
+(epstopdf)             \includegraphics on input line 160.
+Package epstopdf Info: Output file is already uptodate.
+<FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf, id=30, 499.8675pt x 651.43375pt>
+File: FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf Graphic file (type pdf)
+<use FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf>
+Package pdftex.def Info: FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf  used on input line 160.
+(pdftex.def)             Requested size: 177.06073pt x 230.74867pt.
+
+Underfull \hbox (badness 4403) in paragraph at lines 165--166
 []\OT1/ptm/m/n/9 The aero-dy-namic cal-cu-la-tions use the com-press-ible Reynolds-
  []
 
@@ -698,106 +707,110 @@ Underfull \hbox (badness 4403) in paragraph at lines 127--128
 [1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <./FIGURES/LS_FRAMEWORK/icingFramework.png>]
-<FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png, id=39, 1355.0625pt x 1003.75pt>
+]
+<FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png, id=42, 1355.0625pt x 1003.75pt>
 File: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png Graphic file (type png)
 <use FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png>
-Package pdftex.def Info: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png  used on input line 151.
+Package pdftex.def Info: FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png  used on input line 189.
 (pdftex.def)             Requested size: 212.47287pt x 157.38692pt.
-<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png, id=40, 1355.0625pt x 1003.75pt>
+<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png, id=44, 1355.0625pt x 1003.75pt>
 File: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png Graphic file (type png)
 <use FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png>
-Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png  used on input line 161.
+Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png  used on input line 198.
 (pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
-<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png, id=41, 1355.0625pt x 1003.75pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+<FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png, id=45, 1355.0625pt x 1003.75pt>
 File: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png Graphic file (type png)
 <use FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png>
-Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png  used on input line 170.
+Package pdftex.def Info: FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png  used on input line 207.
 (pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
-
-
-<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=42, 1355.0625pt x 749.80125pt>
+<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=46, 1355.0625pt x 749.80125pt>
 File: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png Graphic file (type png)
 <use FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>
-Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 181.
-(pdftex.def)             Requested size: 121.41252pt x 67.18173pt.
-<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=43, 1355.0625pt x 731.73375pt>
+Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 218.
+(pdftex.def)             Requested size: 189.70876pt x 104.97145pt.
+<FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png, id=47, 1355.0625pt x 731.73375pt>
 File: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png Graphic file (type png)
 <use FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>
-Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 188.
-(pdftex.def)             Requested size: 121.41252pt x 65.5629pt.
+Package pdftex.def Info: FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png  used on input line 225.
+(pdftex.def)             Requested size: 189.70876pt x 102.44202pt.
 
 
-[2 <./FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png> <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png> <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png>]
-<FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png, id=57, 1355.0625pt x 1003.75pt>
+[2 <./FIGURES/LS_FRAMEWORK/icingFramework-eps-converted-to.pdf> <./FIGURES/NACA0012/AERODYNAMIC/tc_naca0012_ae3932_L1_cp_vs_x_slice_0p9144_all_roughness.png> <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_beta_bins07_vs_s_slice_0p9144_all_roughness_eulerian_grid_levels.png>]
+<FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png, id=62, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png  used on input line 207.
+Package pdftex.def Info: FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png  used on input line 244.
 (pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
-<FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png, id=58, 1355.0625pt x 1003.75pt>
+<FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png, id=63, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png  used on input line 216.
+Package pdftex.def Info: FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png  used on input line 253.
 (pdftex.def)             Requested size: 217.53285pt x 161.12402pt.
-<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=59, 1355.0625pt x 1003.75pt>
+<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=64, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 227.
-(pdftex.def)             Requested size: 121.41252pt x 89.93538pt.
-<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=60, 1355.0625pt x 1003.75pt>
+Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 264.
+(pdftex.def)             Requested size: 189.70876pt x 140.52403pt.
+<FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png, id=65, 1355.0625pt x 1003.75pt>
 File: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png Graphic file (type png)
 <use FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png>
-Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 234.
-(pdftex.def)             Requested size: 121.41252pt x 89.93538pt.
+Package pdftex.def Info: FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png  used on input line 271.
+(pdftex.def)             Requested size: 189.70876pt x 140.52403pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 (./sae_paper.bbl
-Underfull \hbox (badness 1762) in paragraph at lines 19--20
+Underfull \hbox (badness 1762) in paragraph at lines 10--11
 []\OT1/ptm/m/n/9 E. Lau-ren-deau, S. Bourgault-Cote, I. A. Ozcer, R. Hann,
  []
 
 
 
-[3 <./FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png> <./FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png>])
-Overfull \hbox (25.80739pt too wide) in paragraph at lines 281--289
+[3 <./FIGURES/NACA0012/IMPINGEMENT/tc_naca0012_ae3932_water_mass_vs_n_lagrangian_vs_eulerian_bins01_bins07.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3932_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/NACA0012/ICE_SHAPES/tc_naca0012_ae3933_L1_single_layer_ice_shape_slice_0p9144_all_bins.png> <./FIGURES/ONERAM6/AERODYNAMIC/tc_oneram6_L1_cp_vs_x_slice_0p75_roughness_1mm.png> <./FIGURES/ONERAM6/IMPINGEMENT/tc_oneram6_L1_beta_bins01_vs_s_slice_0p75_roughness_1mm.png>]
+
+)
+Overfull \hbox (25.80739pt too wide) in paragraph at lines 316--323
  [][] 
  []
 
 
-Overfull \hbox (26.96458pt too wide) in paragraph at lines 300--307
+Overfull \hbox (26.96458pt too wide) in paragraph at lines 333--340
  [][] 
  []
 
 
-Overfull \hbox (26.96458pt too wide) in paragraph at lines 318--322
+Overfull \hbox (26.96458pt too wide) in paragraph at lines 350--353
  [][] 
  []
 
 
 
-
-
-[4
-
-] (./sae_paper.aux)
+[4 <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_single_layer_ice_shape_slice_0p75_bins07_roughness_1mm.png> <./FIGURES/ONERAM6/ICE_SHAPES/tc_oneram6_L1_multilayer_ice_shape_slice_0p75_bins07_roughness_1mm.png>] (./sae_paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29310 strings out of 473190
- 752224 string characters out of 5715801
- 1252484 words of memory out of 5000000
- 52047 multiletter control sequences out of 15000+600000
+ 29313 strings out of 473190
+ 752327 string characters out of 5715801
+ 1256617 words of memory out of 5000000
+ 52050 multiletter control sequences out of 15000+600000
  581863 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,87p,1672b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sae_paper.pdf (4 pages, 851932 bytes).
+ 84i,12n,87p,989b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sae_paper.pdf (4 pages, 846763 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

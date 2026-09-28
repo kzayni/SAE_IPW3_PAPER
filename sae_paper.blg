@@ -6,46 +6,47 @@ Database file #1: references.bib
 Warning--empty institution in broeren2011aerodynamic
 Warning--empty journal in champsArticle
 Warning--empty year in champsArticle
+Warning--empty school in sbcThesis
 Warning--empty publisher in OSHER2004
 You've used 16 entries,
             1876 wiz_defined-function locations,
-            584 strings with 6520 characters,
-and the built_in function-call counts, 4492 in all, are:
-= -- 435
-> -- 178
-< -- 1
-+ -- 66
-- -- 50
-* -- 334
-:= -- 640
-add.period$ -- 16
+            583 strings with 6508 characters,
+and the built_in function-call counts, 4432 in all, are:
+= -- 434
+> -- 172
+< -- 0
++ -- 64
+- -- 48
+* -- 318
+:= -- 626
+add.period$ -- 17
 call.type$ -- 16
-change.case$ -- 16
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 235
-empty$ -- 418
-format.name$ -- 50
-if$ -- 1092
+cite$ -- 21
+duplicate$ -- 239
+empty$ -- 411
+format.name$ -- 48
+if$ -- 1082
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 15
-newline$ -- 52
+newline$ -- 53
 num.names$ -- 16
-pop$ -- 52
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 158
+skip$ -- 164
 stack$ -- 0
-substring$ -- 292
-swap$ -- 98
-text.length$ -- 1
+substring$ -- 276
+swap$ -- 102
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 42
+warning$ -- 5
+while$ -- 41
 width$ -- 18
-write$ -- 160
-(There were 4 warnings)
+write$ -- 159
+(There were 5 warnings)
