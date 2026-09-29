@@ -25,14 +25,19 @@
 % Charge le module graphique tikz
 \usepackage{tikz}
 \usepackage{pgfplots}
+
+\usepackage{changes}
+\definechangesauthor[name={Maxime}, color=red]{MA}
+\newcommand{\add}[2][id=MA]{\added[#1]{#2}}
+\newcommand{\rep}[3][id=MA]{\replaced[#1]{#2}{#3}}
+\newcommand{\del}[2][id=MA]{\deleted[#1]{#2}}
+
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{shapes,decorations,shadows,arrows,calc}
 \usetikzlibrary{decorations.markings}
 
+
 \newcommand{\ignore}[1]{}
-\newcommand{\todo}[1]{\textcolor{red}{TODO: {#1}}}
-\newcommand{\todr}[1]{\textcolor{purple}{CAN CUT: {#1}}}
-\newcommand{\todm}[1]{\textcolor{green}{MOVE: {#1}}}
 \newcommand{\case}[1]{\mbox{\textit{#1}}}
 \newcommand{\textss}[1]{\textsuperscript{#1}}
 \renewcommand{\deg}{$^\circ$}
@@ -84,14 +89,14 @@
 
 \begin{document}
 \maketitle
-
 % ============================================================
 % ABSTRACT
 % ============================================================
+\add{Remove authors names before submitting the abstract}
 
 \begin{abstract}
 
-This paper presents the contribution of Polytechnique Montr\'{e}al to the Third AIAA Ice Prediction Workshop (IPW3) using the in-house \textsc{CHAMPS} multiphysics software. The study provides a module-wise verification and validation of the numerical icing framework for the three-dimensional NACA0012 and ONERAM6 configurations, including aerodynamic flow, droplet impingement, thermodynamics, and ice accretion. Predictions are evaluated across the prescribed workshop grid hierarchies and droplet-size discretizations. Predictions across the different modules of the icing framework remain consistent with grid and droplet-size refinements. Single-layer ice shapes exhibit limited spatial sensitivity and remain within the experimental envelopes. Multilayer simulations produce more complex three-dimensional morphologies but do not necessarily improve agreement with experiment.
+This paper presents the contribution of Polytechnique Montr\'{e}al to the Third AIAA Ice Prediction Workshop (IPW3) using the in-house \textsc{CHAMPS} multiphysics software. The study provides a module-wise verification and validation of the numerical icing framework for the three-dimensional NACA0012 and ONERAM6 configurations, including aerodynamic flow, droplet impingement, thermodynamics, and ice accretion. Predictions are evaluated across the prescribed workshop grid hierarchies and \rep{droplet diameter classes}{droplet-size discretizations}. \rep{Results obtained}{Predictions} across the different modules of the icing framework remain consistent with grid and droplet-size \add{discretization} refinements. Single-layer \add{numerical} ice shapes \add{leads to smooth ice contours with limited geometric complexity} within the experimental envelopes and exhibit limited \rep{sensitivity to the surface mesh resolution}{spatial sensitivity}. Multilayer simulations produce more complex three-dimensional morphologies but do not necessarily improve agreement with experiment.
 
 \end{abstract}
 
@@ -101,17 +106,17 @@ This paper presents the contribution of Polytechnique Montr\'{e}al to the Third 
 
 \section{Introduction}
 
-Aircraft ice accretion is a multiphysics phenomenon involving aerodynamic flow, supercooled water-droplet impingement, surface thermodynamics, and progressive evolution of the iced geometry. Ice contamination can substantially modify the effective shape of lifting surfaces and degrade aerodynamic performance \cite{CAO2018353,broeren2011aerodynamic}. Reliable numerical icing tools therefore require accurate prediction not only of the final ice geometry but also of the individual physical components contributing to the accretion process.
+\del{Aircraft ice accretion is a multiphysics phenomenon involving aerodynamic flow, supercooled water-droplet impingement, surface thermodynamics, and progressive evolution of the iced geometry.} \add{Aircraft ice accretion} can substantially modify the effective shape of lifting surfaces and degrade aerodynamic performance \cite{CAO2018353,broeren2011aerodynamic}. Reliable numerical icing tools therefore require accurate prediction not only of the final ice geometry but also of the individual physical components contributing to the accretion process \add{like the computation of the aerodynamic flow, droplet trajectories and surface thermodynamic balance}.
 
-Verification and validation are particularly important for numerical icing because numerical and modeling errors can propagate through successive components of the icing framework. Agreement in the final ice shape may result from compensating errors between these components. Evaluating the aerodynamic, droplet-impingement, and thermodynamic predictions separately therefore helps identify the source of differences observed in the final ice prediction.
+Verification and validation are particularly important for numerical icing because numerical and modeling errors can propagate through successive components of the icing framework. Agreement in the final ice shape may result from compensating errors between these components. Evaluating aerodynamic, droplet-impingement, and thermodynamic \rep{quantities}{predictions} separately therefore helps identify the \rep{impact of each component on}{source of differences observed in} the final ice prediction.
 
-The AIAA Ice Prediction Workshops provide configurations, computational grids, experimental measurements, and code-to-code comparisons to assess the state of the art in numerical icing simulation and identify differences among computational approaches \cite{laurendeau2022summary,laurendeau2024summary}. The Third AIAA Ice Prediction Workshop (IPW3) extends this effort by emphasizing verification and validation through three-dimensional configurations, common grid hierarchies, and experimental measurements, enabling evaluation of spatial and droplet-size discretization effects.
+The AIAA Ice Prediction Workshops provide configurations, computational grids, experimental measurements, and code-to-code comparisons to assess the state of the art in numerical icing simulation and identify differences among computational approaches \cite{laurendeau2022summary,laurendeau2024summary}. The Third AIAA Ice Prediction Workshop (IPW3) extends this effort by emphasizing verification and validation through three-dimensional configurations with common grid hierarchies and experimental measurements \del{enabling evaluation of spatial and droplet-size discretization effects}.
 
 The present work summarizes the contribution of Polytechnique Montr\'{e}al to IPW3 using the in-house \textsc{CHAMPS} multiphysics solver \cite{champsArticle}. Two three-dimensional configurations are considered: the NACA0012 and the swept ONERAM6 wing. Two icing conditions, AE3932 and AE3933, are considered for the NACA0012, together with one icing condition for the ONERAM6. The corresponding icing conditions are summarized in Table~\ref{tab:icingConditions}.
 
 \begin{table}[htbp]
 \centering
-\caption{Icing conditions for the NACA~0012 and ONERA~M6 test cases.}
+\caption{Icing conditions for the NACA~0012 and ONERA~M6 test cases \textcolor{red}{from the IPW3}.}
 \label{tab:icingConditions}
 \begin{tabular}{l ccc}
 \hline
@@ -120,7 +125,7 @@ Condition & AE3932 & AE3933 & ONERA~M6 \\
 $M_\infty$          & 0.3151          & 0.3127          & 0.400 \\
 $Re$                & $4.4\times10^6$ & $4.4\times10^6$ & $4.2558\times10^6$ \\
 $\alpha$ ($^\circ$) & 4.0             & 4.0             & 2.0 \\
-$T_\infty$ (K)      & 262.3           & 262.3           & 267.15 \\
+$T_\infty$ (K)      & 262.3           & \textcolor{red}{265.8} & 267.15 \\
 LWC (g/m$^3$)       & 0.55            & 0.55            & 0.51 \\
 MVD ($\mu$m)        & 20              & 20              & 20 \\
 Icing time (s)      & 420             & 420             & 1350 \\
@@ -128,7 +133,7 @@ Icing time (s)      & 420             & 420             & 1350 \\
 \end{tabular}
 \end{table}
 
-The contribution of this work is a component-wise verification and validation of the complete \textsc{CHAMPS} icing framework. Spatial refinement, droplet-size discretization using 1-, 3-, 7-, and 15-bin distributions, Eulerian and Lagrangian impingement formulations, thermodynamics, and single- and multilayer geometry evolution are examined to identify the numerical and modeling sensitivities influencing the final ice prediction. Spatial discretization is evaluated using the four-level grid hierarchies prescribed for both configurations, summarized in Table~\ref{tab:gridHierarchy}.
+The contribution of this work is a component-wise verification and validation of the complete \textsc{CHAMPS} icing framework. Spatial refinement, droplet-size discretization \del{using 1-, 3-, 7-, and 15-bin distributions}, Eulerian and Lagrangian impingement formulations, thermodynamics, and single- and multilayer \rep{ice shape solutions}{geometry evolution} are examined to identify the numerical and geometry modeling sensitivities influencing the final ice \add{shape} prediction. \add{Sensibility to the} spatial discretization is evaluated using a four-level grid \rep{hierarchy, ranging from coarse to fine}{hierarchies}. \add{Levels are} prescribed for both configurations \add{and are} summarized in Table~\ref{tab:gridHierarchy}.
 \begin{table}[!ht]
 \centering
 \caption{Grid hierarchy for the NACA0012 and ONERAM6 configurations, in millions of cells.}
@@ -153,7 +158,7 @@ L1 & 59.86 & 69.21 \\
 
 \section{Methodology}
 
-The simulations are performed using the unstructured finite-volume \textsc{CHAMPS} multiphysics solver developed at Polytechnique Montr\'{e}al \cite{champsArticle}. The overall numerical icing sequence is illustrated in Fig.~\ref{fig:icingFramework}. The aerodynamic flow is first computed, followed by droplet impingement, surface thermodynamics, and ice accretion. In a single-layer simulation, the complete exposure time is applied directly to a single accretion step. For multilayer simulations, the total exposure time is divided into $N$ discrete accretion steps that are performed sequentially. After each step, the iced geometry is remeshed and the complete icing sequence is repeated for the updated geometry.
+The simulations are performed using the unstructured finite-volume \textsc{CHAMPS} multiphysics solver developed at Polytechnique Montr\'{e}al \cite{champsArticle}. The overall numerical icing sequence is illustrated in Fig.~\ref{fig:icingFramework}. The aerodynamic flow is first computed, followed by droplet \rep{trajectories}{impingement}, surface thermodynamics, and \rep{geometry evolution}{ice accretion}. In a single-layer simulation, the complete exposure time is applied directly to a single accretion step. For multilayer simulations, the total exposure time is divided into $N$ \del{discrete} accretion steps that are performed sequentially. After each step, \rep{a new volume grid is generated}{the iced geometry is remeshed}and the complete icing sequence is repeated for the updated geometry.
 
 \begin{figure}[htb]
     \centering
@@ -162,11 +167,11 @@ The simulations are performed using the unstructured finite-volume \textsc{CHAMP
     \label{fig:icingFramework}
 \end{figure}
 
-The aerodynamic calculations use the compressible Reynolds-averaged Navier--Stokes equations with the Spalart--Allmaras turbulence model \cite{spalart1992one} and Aupoix roughness correction \cite{aupoix2003roughness}. Roe convective fluxes \cite{roe1981approximate} and a Venkatakrishnan limiter \cite{venkatakrishnan1995convergence} are employed.
+The aerodynamic calculations use the compressible Reynolds-averaged Navier-Stokes equations with the Spalart-Allmaras turbulence model \cite{spalart1992one} and \add{the} Aupoix roughness correction \cite{aupoix2003roughness}. \rep{A second-order Roe scheme \cite{roe1981approximate} with the Venkatakrishnan limiter \cite{venkatakrishnan1995convergence} is used for the convective flux discretization}{Roe convective fluxes \mbox{\cite{roe1981approximate}} and a Venkatakrishnan limiter \mbox{\cite{venkatakrishnan1995convergence}} are employed}.
 
-Supercooled droplets are modeled using an Eulerian formulation based on the continuum representation of the dispersed phase and discretized using an upwind scheme \cite{bourgault1999eulerian, sbcThesis}. Complementary Lagrangian calculations are performed using successive refinement of the droplet-seeding cloud to ensure adequate convergence of the collected-water mass and independently verify the collection efficiency predicted by the Eulerian solver~\cite{ZAYNI2026112019}. Droplet-size discretization is examined using 1-, 3-, 7-, and 15-bin representations of the prescribed droplet-size distribution. Each bin represents a discrete droplet diameter with a corresponding fraction of the total liquid water content, allowing the influence of polydispersity on the impingement solution to be assessed.
+Supercooled droplets are modeled using an Eulerian formulation based on the continuum representation of the dispersed phase and discretized using an upwind scheme \cite{bourgault1999eulerian, sbcThesis}. Complementary Lagrangian calculations are performed using successive refinement of the droplet-seeding cloud to ensure adequate convergence of the collected-water mass and independently verify the collection efficiency predicted by the Eulerian solver~\cite{ZAYNI2026112019}. Droplet-size discretization is examined using 1-, 3-, 7-, and 15-bin representations of the \rep{experimental}{prescribed} droplet-size distribution. Each bin represents a discrete droplet diameter with a corresponding fraction of the total Liquid Water Content (LWC). \del{allowing the influence of polydispersity on the impingement solution to be assessed.}
 
-Surface thermodynamics are evaluated using an iterative formulation based on the classical Messinger surface energy balance \cite{messinger1953equilibrium}. Single-layer ice geometries are generated using an algebraic surface-displacement approach, while multilayer calculations use the continuous level-set methodology developed within \textsc{CHAMPS}. Level-set methods provide an implicit representation of evolving interfaces through the zero contour of a scalar field \cite{OSHER198812,OSHER2004}. Following each accretion layer, the interface is extracted using \textsc{MMG} \cite{DAPOGNY2014358} and the aerodynamic domain is regenerated using automated \textsc{Pointwise} procedures.
+Surface thermodynamics are evaluated using an iterative formulation based on the classical Messinger surface energy balance \cite{messinger1953equilibrium}. Single-layer ice geometries are generated using an algebraic surface-displacement approach \cite{sbcThesis}, while multilayer calculations use the continuous level-set methodology developed within \textsc{CHAMPS}. The level-set method provides an implicit representation of evolving interfaces through the zero contour of a scalar field \cite{OSHER198812,OSHER2004}. Following each accretion layer, the interface is extracted using \textsc{MMG} \cite{DAPOGNY2014358} and the aerodynamic domain is regenerated using automated \textsc{Pointwise} procedures \add{ref Pointwise?}.
 
 % ============================================================
 % PRELIMINARY RESULTS
@@ -209,7 +214,7 @@ Complementary Eulerian and Lagrangian calculations provide an independent verifi
 \label{fig:eulLag}
 \end{figure}
 
-Experimentally, the ice mass decreases by approximately $15\%$ between AE3932 and AE3933. The numerical prediction exhibits a substantially smaller reduction of approximately $1.5\%$, indicating insufficient thermodynamic sensitivity to the change in thermal condition. Despite this discrepancy, the single-layer calculations reproduce the experimentally observed change in upper-horn orientation between the two conditions and exhibit limited spatial sensitivity, as shown in Fig.~\ref{fig:nacaIce}.
+Experimentally, the ice mass decreases by approximately $15\%$ between \add{case} AE3932 and \add{case}AE3933. The numerical prediction exhibits a substantially smaller reduction of approximately $1.5\%$. \rep{This may be due to water shedding not being considered in the numerical model}{indicating insufficient thermodynamic sensitivity to the change in thermal condition}. Despite this discrepancy, the single-layer calculations reproduce the experimentally observed change in upper-horn orientation between the two conditions and exhibit limited \rep{sensitivity to the volume grid resolution}{spatial sensitivity}, as shown in Fig.~\ref{fig:nacaIce}.
 
 \begin{figure}[htb]
     \centering
@@ -236,7 +241,7 @@ Experimentally, the ice mass decreases by approximately $15\%$ between AE3932 an
 
 \subsection{ONERA~M6}
 
-The ONERAM6 configuration extends the verification and validation to a three-dimensional swept wing using the grid hierarchy summarized in Table\ref{tab:gridHierarchy}. The aerodynamic predictions exhibit systematic spatial convergence. As shown in Fig.\ref{fig:m6Cp}, the surface-pressure distributions at the midspan slice, $y=0.75$m, show good consistency across the three finest grid levels, with the largest differences concentrated near the leading-edge suction peak. Level4 exhibits the largest deviations, consistent with its comparatively coarse resolution of approximately 135,000 cells, compared with 5.86 million cells for the coarsest NACA0012 grid.
+The ONERAM6 configuration extends the verification and validation to a three-dimensional swept wing using the grid hierarchy summarized in Table\ref{tab:gridHierarchy}. The aerodynamic predictions exhibit systematic \rep{grid}{spatial} convergence. As shown in Fig.\ref{fig:m6Cp}, the surface-pressure distributions at the midspan \rep{station}{slice}, $y=0.75$m, show good consistency across the three finest grid levels, with the largest differences concentrated near the leading-edge suction peak. \del{Level 4 exhibits the largest deviations, consistent with its comparatively coarse resolution of approximately 135,000 cells, compared with 5.86 million cells for the coarsest NACA0012 grid.}
 
 \begin{figure}[htb]
     \centering
@@ -246,7 +251,7 @@ The ONERAM6 configuration extends the verification and validation to a three-dim
     \label{fig:m6Cp}
 \end{figure}
 
-As for the NACA0012 configuration, complementary Eulerian and Lagrangian droplet calculations produce closely matching collection-efficiency distributions for the ONERAM6. Figure~\ref{fig:m6EulLag} shows the comparison at the intermediate spanwise station, $y=0.75$m, on the Level1 grid. Both formulations predict comparable peak collection efficiencies and impingement limits. The ONERAM6 droplet-size distribution is more closely centered around the MVD, with diameters ranging from approximately $6$ to $34\mu$m, whereas the NACA0012 distribution extends to diameters of approximately $150\mu$m.
+As \rep{with}{for} the NACA0012 configuration, complementary Eulerian and Lagrangian droplet calculations produce closely matching collection-efficiency distributions for the ONERAM6. \rep{Fig.}{Figure}~\ref{fig:m6EulLag} shows the comparison at the \rep{$y=0.75$m}{intermidiate} spanwise station on the Level 1 grid. Both formulations predict comparable peak collection efficiencies and impingement limits. The ONERAM6 droplet-size distribution is more closely centered around the Median Volumetric Diameter (MVD). \add{This case has a narrower diameter range} from approximately $6$ to $34\mu$m, whereas the NACA0012 diameter distribution extends to approximately $150\mu$m. \add{Larger droplet diameters are more difficult to predict accurately and may require dedicated SLD models.}
 
 \begin{figure}[htb]
     \centering
@@ -255,7 +260,7 @@ As for the NACA0012 configuration, complementary Eulerian and Lagrangian droplet
     \label{fig:m6EulLag}
 \end{figure}
 
-Single-layer ice shapes exhibit relatively limited sensitivity over the finer workshop grids. Multilayer calculations using the continuous level-set framework produce pronounced three-dimensional horn structures and spanwise variations, as illustrated in Fig.~\ref{fig:m6Ice}.
+Single-layer ice shapes exhibit relatively limited sensitivity \add{to the volume mesh} over the finer workshop grids. Multilayer calculations using the continuous level-set framework produce pronounced three-dimensional horn structures and spanwise variations, as illustrated in Fig.~\ref{fig:m6Ice}.
 
 \begin{figure}[htb]
     \centering
@@ -282,7 +287,7 @@ Single-layer ice shapes exhibit relatively limited sensitivity over the finer wo
 
 \section{Expected Results}
 
-The completed study will provide the full Polytechnique Montr\'{e}al IPW3 verification and validation results for the NACA~0012 and ONERA~M6 configurations. The final analysis will also investigate multilayer geometry evolution, including the influence of evolving surface normals, roughness models, and ice-density modeling. Comparisons with experimental measurements and IPW3 participant data will be used to determine how these modeling choices influence integrated ice mass, horn orientation, and three-dimensional ice morphology.
+The completed study will provide the full Polytechnique Montr\'{e}al IPW3 verification and validation results for the NACA~0012 and ONERA~M6 configurations. The final analysis will also investigate multilayer geometry evolution, including the influence of \rep{the choice of the direction of the surface displacement}{evolving surface normals}, the roughness model, and the ice-density \rep{model (an imposed value or a model?)}{modeling}. Comparisons with experimental measurements and IPW3 participant data will be used to determine how these modeling choices influence the integrated ice mass, horn orientation, and three-dimensional ice morphology.
 
 \bibliographystyle{ieeetr} % closest to SAE
 \bibliography{references}
